@@ -2,16 +2,16 @@ class Main {
 
     public void 2Sum() {
         // N
-		Arrays.sort(INPUT);
+        Arrays.sort(INPUT);
 
-		// O(nlog(n))
+        // O(nlog(n))
         for(int i = 0; i < INPUT.length; i++) {
-			int insertPoint = Arrays.binarySearch(INPUT, 2020-INPUT[i]);
-			if (insertPoint >= 0) {
-				System.out.println(INPUT[i] + " and " + INPUT[insertPoint] + " = " + INPUT[i]*INPUT[insertPoint]);
-				return;
-			}
-		}
+            int insertPoint = Arrays.binarySearch(INPUT, 2020-INPUT[i]);
+            if (insertPoint >= 0) {
+                System.out.println(INPUT[i] + " and " + INPUT[insertPoint] + " = " + INPUT[i]*INPUT[insertPoint]);
+                return;
+            }
+        }
     }
 
     public void 3Sum() {
@@ -21,17 +21,17 @@ class Main {
                 if (i == j || i + j > 2020) {
                     continue;
                 }
-				for(int k = 0; k < INPUT.length; k++) {
-					if(k == i || k == j || i + j + k > 2020) {
-						continue;
-					}
-					if(INPUT[i]+ INPUT[j] + INPUT[k] == 2020) {
+                for(int k = 0; k < INPUT.length; k++) {
+                    if(k == i || k == j || i + j + k > 2020) {
+                        continue;
+                    }
+                    if(INPUT[i]+ INPUT[j] + INPUT[k] == 2020) {
                         System.out.println(
                             INPUT[i] + " and " + INPUT[j] + " and " + INPUT[k] + " = " 
                             + INPUT[i]*INPUT[j]*INPUT[k]);
                         return;
                     }
-				}
+                }
             }
         }
     }
