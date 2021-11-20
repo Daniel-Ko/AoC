@@ -12,7 +12,7 @@ def partA():
         print(final_sum + len(grp_uniq_q))
 
 
-def testA():
+def partB():
     with open("input.txt", "r") as fp:
         grp_uniq_q = set()
         final_sum = 0
@@ -26,6 +26,8 @@ def testA():
 
                 grp_uniq_q.clear()
                 no_common = False
+
+            # Skip the group as we found nothing in common between the first 2 people
             elif no_common:
                 continue
 
@@ -34,9 +36,8 @@ def testA():
                 grp_uniq_q.update(line.strip())
 
             else:
-                # print(grp_uniq_q)
+                # If no commonalities after the first add, we skip this group
                 if grp_uniq_q.isdisjoint(line):
-                    # print(f"is disjoint: {grp_uniq_q} and {line}")
                     grp_uniq_q.clear()
                     no_common = True
                 else:
@@ -46,4 +47,4 @@ def testA():
         # assert final_sum + len(grp_uniq_q) == 6
 
 
-testA()
+part
