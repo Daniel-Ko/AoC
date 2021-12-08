@@ -1,2 +1,9 @@
 input.txt
 .vscode/
+
+debug/
+target/
+
+Cargo.lock
+
+**/*.rs.bk
